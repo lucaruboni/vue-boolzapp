@@ -1,3 +1,17 @@
+/* common */
+:root{
+    --light-grey: #eaeaea;
+    --light-cream: #f3eeea;
+    --light-green: #d5f9ba;
+    --light-blue: #8edafc;
+}
+
+
+
+
+
+/* utilities */
+
 img{
     height: 45px;
     border-radius: 50%;
@@ -6,9 +20,10 @@ img{
 
 .col_left, .col_right{
     border: 1px solid;
+   
 }
 .chat{
-    height: 700px;
+    height: 651px;
 }
 
 li{
@@ -20,11 +35,71 @@ li{
 
 .nav_left, .nav_right{
     border-bottom: 1px solid;
+    background-color: var(--light-grey);
 }
 .write_message_nav{
     width: 100%;
     border-top: 1px solid;
+    background-color: var(--light-cream);
+    position: sticky;
+    bottom: 0;
+    right: 0;
 }
 .message_nav_width{
     width: 100%;
+}
+
+
+main{
+    background-image: url(../img/mine.jpg);
+}
+
+.toggle_notifications> i{
+    font-size: 1.8rem;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    color: var(--light-blue);
+    background-color: white;
+    border-radius: 50%;
+}
+
+.toggle_notifications_right> h6{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.toggle_notifications_right> a{
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    color: rgb(88, 88, 88);
+}
+
+.toggle_notifications{
+    background-color: var(--light-blue);
+}
+
+.chat_object_right> span{
+    font-size: 0.7rem;
+}
+
+.chat_list> ul{
+    border-bottom: 0.07rem solid rgb(215, 215, 215);
+}
+.message_hours{
+    font-size: 0.6rem;
+    color: grey;
+    margin-left: 4rem;
+}
+
+.last_acces> span{
+    font-size: 0.7rem;
+}
+
+.your_msg{
+    background-color: white;
+       
+}
+
+.my_msg{
+    background-color: var(--light-green);
 }
