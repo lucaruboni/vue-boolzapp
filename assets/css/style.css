@@ -14,3 +14,10 @@ img{
 li{
     list-style-type: none;
 }
+.message_input{
+    width: 350px;
+}
+
+.nav_left, .nav_right{
+    border-bottom: 1px solid;
+}
