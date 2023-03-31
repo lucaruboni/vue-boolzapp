@@ -1,0 +1,16 @@
+img{
+    height: 45px;
+    border-radius: 50%;
+
+}
+
+.col_left, .col_right{
+    border: 1px solid;
+}
+.chat{
+    height: 700px;
+}
+
+li{
+    list-style-type: none;
+}
