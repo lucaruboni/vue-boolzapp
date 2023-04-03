@@ -44,6 +44,7 @@ img{
 .chat{
     height: 651px;
     background-image: url(../img/mine.jpg);
+    overflow-y: auto;
 }
 
 li{
