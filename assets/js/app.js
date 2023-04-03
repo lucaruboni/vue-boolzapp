@@ -226,16 +226,17 @@ createApp({
         
 
 
-    },
-    computed: {
-        filteredContact() {
-          return this.contacts.filter(contacts => {
-            return contacts.name.toLowerCase().includes(this.searchContact.toLowerCase())
-          })
-        
-        }
-      }
+    }
+    
 
   
+  },
+  computed: {
+    filteredContact() {
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+      })
+    
+    }
   }
 }).mount('#app')

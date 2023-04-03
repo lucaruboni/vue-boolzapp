@@ -74,7 +74,7 @@
 
                     <div class="chat_list d-flex flex-column">
                         <ul class="p-0 w-100 contact_list" >
-                            <li class="chat_object d-flex w-100 ps-2 py-2 my-3" v-for="(contact, index) in contacts" v-for="contact in filteredContact" :class="index === activeContact ? 'active' : '' " @click="changeChat(index)">
+                            <li class="chat_object d-flex w-100 ps-2 py-2 my-3" v-for="(contact, index) in filteredContact"  :class="index === activeContact ? 'active' : '' " @click="changeChat(index)">
                                 <img :src="contact.avatar" alt="">
                                 <div class="chat_object_right ms-3">
                                     <h6 class="m-0">{{contact.name}}</h6>
