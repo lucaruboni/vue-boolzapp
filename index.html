@@ -132,12 +132,14 @@
                           <div class="d-flex justify-content-between mt-2 ms-5" v-for="(message, status, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'your_message' : 'my_message'">
                             {{message.message}}
 
-                            <span class="message_hours align-self-end p-2">12:00</span>
+                            <span class="message_hours align-self-end p-2">{{message.date}}</span>
                           </div>
                         </div>
 
                      
                     </div>
+
+                    <!-- WRITE MESSAGE -->
 
                     <nav class="write_message_nav d-flex align-self-end">
                         <ul class="nav messsage_nav_width d-flex justify-content-around w-100 my-2">
@@ -148,7 +150,7 @@
                                   </svg>
                             </li>
                             <li class="nav-item">
-                                <input type="text" class="message_input">
+                                <input type="text" class="message_input" @keyup.enter="writeMessage(newMessage)" v-model="newMessage">
                             </li>
                             <li class="nav-item ms-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">

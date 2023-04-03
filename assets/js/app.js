@@ -4,7 +4,12 @@ Replica della grafica con la possibilità di avere messaggi scritti dall’utent
 Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto
 Milestone 2
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
-Click sul contatto mostra la conversazione del contatto cliccato */
+Click sul contatto mostra la conversazione del contatto cliccato 
+Milestone 3
+● Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+“enter” il testo viene aggiunto al thread sopra, come messaggio verde
+● Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+un “ok” come risposta, che apparirà dopo 1 secondo.*/
 
 
 const { createApp } = Vue
@@ -12,7 +17,7 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      message: 'Hello Vue!',
+      newMessage: '',
       activeContact: 0,
       me: {
         name:'Luca',
@@ -191,6 +196,22 @@ createApp({
         console.log(index)
         this.activeContact = index
        
+    },
+    writeMessage(newMessage ,messages, index){
+        
+        console.log(this.newMessage)
+        if(this.newMessage.length > 5){
+            console.log(this.contacts.index[messages])
+           /*  this.contacts.messages.index.push(
+                {
+                    date: '10/01/2020 15:51:00',
+                    message: newMessage,
+                    status: 'received'
+            }
+            ) */
+        }
+
+
     }
   }
 }).mount('#app')
