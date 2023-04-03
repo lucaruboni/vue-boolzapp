@@ -126,20 +126,15 @@
 
 
                     <div class="chat d-flex flex-column">
-                        <div class="your_message_box d-flex justify-content-start">
-                          <div class="your_message d-flex justify-content-between mt-2 ms-5" v-for="(message, status, index) in contacts[activeContact].messages" >
-                            
-                            <span class="p-2">{{message.message}}</span>
+                        <div class="message_box d-flex flex-column justify-content-start">
+                          <div class="d-flex justify-content-between mt-2 ms-5" v-for="(message, status, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'your_message' : 'my_message'">
+                            {{message.message}}
+
                             <span class="message_hours align-self-end p-2">12:00</span>
                           </div>
                         </div>
 
-                        <div class="my_message_box d-flex justify-content-end">
-                          <div class="my_message d-flex justify-content-between mt-2 me-5">
-                            <span class="p-2">Ciao come va</span>
-                            <span class="message_hours align-self-end p-2">12:00</span>
-                          </div>
-                        </div>
+                     
                     </div>
 
                     <nav class="write_message_nav d-flex align-self-end">
