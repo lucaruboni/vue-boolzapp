@@ -93,9 +93,11 @@
                         <nav class="nav_right d-flex justify-content-between p-2">
 
                             <div class="d-flex">
-                                <img src="./assets/img/avatar_1.jpg" alt="">
+                                <img :src="contacts[activeContact].avatar" alt="">
                                 <div class="last_acces ps-2">
-                                  <h6 class="user_name align-self-center m-0">Marco</h6>
+                                  <h6 class="user_name align-self-center m-0">
+                                    {{contacts[activeContact].name}}
+                                  </h6>
                                   <span>Ultimo accesso alle 12:00</span>
                                 </div>  
                             </div>
