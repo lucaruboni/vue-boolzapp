@@ -14,7 +14,7 @@
 
 #app{
     height: 100vh;
-    background: linear-gradient(to top, grey 90%, green 50%);
+    background: linear-gradient(to top, var(--light-grey) 90%, rgb(21, 113, 111) 50%);
 }
 
 img{
@@ -25,7 +25,7 @@ img{
 }
 
 .col_left, .col_right{
-    border: 1px solid;
+    border: 1px solid var(--light-cream);
     
   
 }
@@ -55,12 +55,12 @@ li{
 }
 
 .nav_left, .nav_right{
-    border-bottom: 1px solid;
+    border-bottom: 1px solid var(--light-cream);
     background-color: var(--light-grey);
 }
 .write_message_nav{
     width: 100%;
-    border-top: 1px solid;
+    border-top: 1px solid var(--light-cream);
     background-color: var(--light-cream);
     position: sticky;
     bottom: 0;
