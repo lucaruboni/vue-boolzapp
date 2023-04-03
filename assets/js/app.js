@@ -199,19 +199,30 @@ createApp({
     },
     writeMessage(){
         
-        console.log(this.newMessage, this.contacts.messages)
+        console.log(this.newMessage, this.contacts[this.activeContact].message)
          
            
-             this.contacts.messages.push(
+             this.contacts[this.activeContact].messages.push(
                 {
                     date: '10/01/2020 15:51:00',
                     message: this.newMessage,
                     status: 'received'
             }
             ) 
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push(
+                    {
+                        date: '10/01/2020 15:51:00',
+                        message: 'ok!',
+                        status: 'sent'
+                }
+                )   
+            }, 1000);
         
 
 
     }
+
+  
   }
 }).mount('#app')
