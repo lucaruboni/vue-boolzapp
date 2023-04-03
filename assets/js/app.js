@@ -214,6 +214,7 @@ createApp({
                     status: 'received'
             }
             ) 
+            this.newMessage = '';
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push(
                     {
