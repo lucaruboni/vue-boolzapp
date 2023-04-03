@@ -12,18 +12,38 @@
 
 /* utilities */
 
+#app{
+    height: 100vh;
+    background: linear-gradient(to top, grey 90%, green 50%);
+}
+
 img{
     height: 45px;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 
 }
 
 .col_left, .col_right{
     border: 1px solid;
-   
+    
+  
 }
+
+.col-4{
+    background-color: white;
+}
+
+
+
+.contact_list{
+    overflow-y: auto;
+    height: 550px;
+}
+
 .chat{
     height: 651px;
+    background-image: url(../img/mine.jpg);
 }
 
 li{
@@ -49,10 +69,6 @@ li{
     width: 100%;
 }
 
-
-main{
-    background-image: url(../img/mine.jpg);
-}
 
 .toggle_notifications> i{
     font-size: 1.8rem;
@@ -81,10 +97,6 @@ main{
 .chat_object_right> span{
     font-size: 0.7rem;
 }
-
-.chat_list> ul{
-    border-bottom: 0.07rem solid rgb(215, 215, 215);
-}
 .message_hours{
     font-size: 0.6rem;
     color: grey;
@@ -95,11 +107,33 @@ main{
     font-size: 0.7rem;
 }
 
-.your_msg{
-    background-color: white;
-       
+.your_message_box{
+    height: 80px;
+    width: 100%;
+}
+.my_message_box{
+    height: 80px;
+    width: 100%;
 }
 
-.my_msg{
-    background-color: var(--light-green);
+.your_message{
+    height: 60px;
+    background-color: white;
+    border-radius: 8px;
 }
+
+.my_message{
+    height: 60px;
+    background-color: var(--light-green);
+    border-radius: 8px;
+}
+
+.active{
+    background-color:  var(--light-grey);
+}
+
+
+.row{
+    height: 100%;
+}
+

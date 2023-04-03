@@ -17,16 +17,16 @@
 
     <div id="app">
         
-        <div class="container container">
+        <div class="container">
             
-            <div class="row mt-5">
+            <div class="row">
 
-                <div class="col-4 p-0 col_left flex-column">  
+                <div class="col-4 mt-5 p-0 col_left flex-column">  
                     <nav class="nav_left d-flex justify-content-between p-2">
                         
                         <div class="d-flex">
-                            <img src="./assets/img/avatar_1.jpg" alt="">
-                            <h6 class="user_name align-self-center">Marco</h6>
+                            <img :src="me.avatar" alt="">
+                            <h6 class="user_name align-self-center ms-2">{{me.name}}</h6>
                         </div>
 
                         <ul class="nav justify-content-end">
@@ -64,12 +64,12 @@
                           </div>
                     </div>
 
-                    <div class="chat_list d-flex">
-                        <ul class="p-0 w-100">
-                            <li class="chat_object d-flex w-100 ms-3 mb-1">
-                                <img src="./assets/img/avatar_2.jpg" alt="">
+                    <div class="chat_list d-flex flex-column">
+                        <ul class="p-0 w-100 contact_list" >
+                            <li class="chat_object d-flex w-100 ps-2 py-2 my-3" v-for="(contact, index) in contacts" :class="index === activeContact ? 'active' : '' " @click="changeChat(index)">
+                                <img :src="contact.avatar" alt="">
                                 <div class="chat_object_right ms-3">
-                                    <h6 class="m-0">Mattia</h6>
+                                    <h6 class="m-0">{{contact.name}}</h6>
                                     <span>ultimo messaggio inviato</span>
                                 </div>
                                 <span class="message_hours d-inline-block align-self-baseline align-items-end">12:00</span>
@@ -80,7 +80,8 @@
 
                 </div>
 
-                <div class="col-8 p-0 col_right">
+                
+                <div class="col-8 p-0 mt-5 col_right">
                     <header>
                         <nav class="nav_right d-flex justify-content-between p-2">
 
@@ -112,33 +113,22 @@
                               </ul>
                         </nav>
                     </header>
-                    <main class="chat d-flex">
-                        
-                        <div class="chat_container d-flex">
-                          
-                          <div class="col your_message_side">
-                              
-                                <div class="your_msg d-flex justify-content-between p-1 rounded-2 mt-4">
-                                  <span class="p-2">Ciao come va?</span>
-                                  <span class="ms-3 mt-4 p-1 message_hours">12:00</span>
-                                  
 
-                                </div>
-                              
+                    <div class="chat d-flex flex-column">
+                        <div class="your_message_box d-flex justify-content-start">
+                          <div class="your_message d-flex justify-content-between mt-2 ms-5">
+                            <span class="p-2">Ciao come va</span>
+                            <span class="message_hours align-self-end p-2">12:00</span>
                           </div>
-
-                          <div class="col my_message_side">
-                            <ul class="my_msg_list">
-                              <li class="my_msg d-flex justify-content-between p-1 rounded-2 mt-4">
-                                <span class="p-2">Ciao come va?</span>
-                                  <span class="ms-3 mt-4 p-1 message_hours">12:00</span>
-                              </li>
-                            </ul>
-                          </div>
-
                         </div>
-                        
-                    </main>
+
+                        <div class="my_message_box d-flex justify-content-end">
+                          <div class="my_message d-flex justify-content-between mt-2 me-5">
+                            <span class="p-2">Ciao come va</span>
+                            <span class="message_hours align-self-end p-2">12:00</span>
+                          </div>
+                        </div>
+                    </div>
 
                     <nav class="write_message_nav d-flex align-self-end">
                         <ul class="nav messsage_nav_width d-flex justify-content-around w-100 my-2">
