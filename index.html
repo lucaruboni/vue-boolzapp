@@ -21,6 +21,8 @@
             
             <div class="row">
 
+              <!-- LEFT SIDE -->
+
                 <div class="col-4 mt-5 p-0 col_left flex-column">  
                     <nav class="nav_left d-flex justify-content-between p-2">
                         
@@ -64,6 +66,9 @@
                           </div>
                     </div>
 
+                      <!-- CONTATTI -->
+        
+
                     <div class="chat_list d-flex flex-column">
                         <ul class="p-0 w-100 contact_list" >
                             <li class="chat_object d-flex w-100 ps-2 py-2 my-3" v-for="(contact, index) in contacts" :class="index === activeContact ? 'active' : '' " @click="changeChat(index)">
@@ -80,6 +85,8 @@
 
                 </div>
 
+
+                <!-- RIGHT SIDE -->
                 
                 <div class="col-8 p-0 mt-5 col_right">
                     <header>
@@ -113,6 +120,10 @@
                               </ul>
                         </nav>
                     </header>
+
+
+                      <!-- CHAT -->
+
 
                     <div class="chat d-flex flex-column">
                         <div class="your_message_box d-flex justify-content-start">
