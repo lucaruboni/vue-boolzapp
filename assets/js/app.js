@@ -197,19 +197,19 @@ createApp({
         this.activeContact = index
        
     },
-    writeMessage(newMessage ,messages, index){
+    writeMessage(){
         
-        console.log(this.newMessage)
-        if(this.newMessage.length > 5){
-            console.log(this.contacts.index[messages])
-           /*  this.contacts.messages.index.push(
+        console.log(this.newMessage, this.contacts.messages)
+         
+           
+             this.contacts.messages.push(
                 {
                     date: '10/01/2020 15:51:00',
-                    message: newMessage,
+                    message: this.newMessage,
                     status: 'received'
             }
-            ) */
-        }
+            ) 
+        
 
 
     }
