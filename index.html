@@ -116,8 +116,8 @@
 
                     <div class="chat d-flex flex-column">
                         <div class="your_message_box d-flex justify-content-start">
-                          <div class="your_message d-flex justify-content-between mt-2 ms-5">
-                            <span class="p-2">Ciao come va</span>
+                          <div class="your_message d-flex justify-content-between mt-2 ms-5" v-for="(contact, status, index) in contacts" >
+                            <span class="p-2">{{contact[activeContact].message}}</span>
                             <span class="message_hours align-self-end p-2">12:00</span>
                           </div>
                         </div>
