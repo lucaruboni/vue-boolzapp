@@ -53,6 +53,10 @@ li{
 .message_input{
     width: 500px;
 }
+.message_text{
+    max-width: 450px;
+    
+}
 
 .nav_left, .nav_right{
     border-bottom: 1px solid var(--light-cream);

@@ -16,6 +16,7 @@ contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> 
 “mar” rimangono solo Marco e Martina)*/
 
 
+
 const { createApp } = Vue
 
 createApp({
@@ -209,7 +210,7 @@ createApp({
            
              this.contacts[this.activeContact].messages.push(
                 {
-                    date: '10/01/2020 15:51:00',
+                    date: toLocaleString(DateTime.DATETIME_SHORT),
                     message: this.newMessage,
                     status: 'received'
             }
@@ -218,7 +219,7 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push(
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: toLocaleString(DateTime.DATETIME_SHORT),
                         message: 'ok!',
                         status: 'sent'
                 }
@@ -239,5 +240,9 @@ createApp({
       })
     
     }
+    
   }
 }).mount('#app')
+
+
+let DateTime = luxon.DateTime;
