@@ -25,6 +25,7 @@ createApp({
       newMessage: '',
       searchContact: '',
       activeContact: 0,
+      
       me: {
         name:'Luca',
         avatar: './assets/img/download.jpg'
@@ -210,7 +211,7 @@ createApp({
            
              this.contacts[this.activeContact].messages.push(
                 {
-                    date: toLocaleString(DateTime.DATETIME_SHORT),
+                    date: dt.toLocaleString(dt.DATETIME_SHORT),
                     message: this.newMessage,
                     status: 'received'
             }
@@ -219,7 +220,7 @@ createApp({
             setTimeout(() => {
                 this.contacts[this.activeContact].messages.push(
                     {
-                        date: toLocaleString(DateTime.DATETIME_SHORT),
+                        date: dt.toLocaleString(dt.DATETIME_SHORT),
                         message: 'ok!',
                         status: 'sent'
                 }
@@ -239,10 +240,11 @@ createApp({
         return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
       })
     
-    }
+    },
+   
     
   }
 }).mount('#app')
 
 
-let DateTime = luxon.DateTime;
+ let dt = luxon.DateTime;

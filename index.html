@@ -13,7 +13,7 @@
     
 
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.min.js"></script>
 
     <div id="app">
         
@@ -135,7 +135,22 @@
                           <div class="d-flex flex-wrap justify-content-between mt-2 ms-5" v-for="(message, status, index) in contacts[activeContact].messages" :class="message.status === 'sent' ? 'your_message' : 'my_message'">
                            <span class="message_text">{{message.message}}</span> 
 
-                            <span class="message_hours align-self-end p-2">{{message.date}}</span>
+                            <div class="message_info">
+                              
+                                <div class="dropdown align-self-end">
+                                  
+                                  
+                                    <i role="button" data-bs-toggle="dropdown" aria-expanded="false" class="bi bi-chevron-down"></i>
+                                  
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Delete Message</a></li>
+                                  </ul>
+                                </div>
+                              
+                                <span class="message_hours pb-2 align-self-end">{{message.date}}</span>
+                            </div>
+                             
+
                           </div>
                         </div>
 
@@ -175,7 +190,7 @@
 
 
 
-    <script src="luxon.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
 
     <script src="./assets/js/app.js"></script>
     
